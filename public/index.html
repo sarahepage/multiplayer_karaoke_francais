@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel='stylesheet' href='/css/style.css'>
+    <script src='//code.jquery.com/jquery-1.11.0.min.js'></script>
+    <script src='/socket.io/socket.io.js'></script>
+
+    <title>Karaoke Français</title>
+  </head>
+  <body>
+<!--     <div id="scores">
+      <p>Score</p>
+      <p class="score">Player 1:</p>
+      <p class="score">Player 2:</p>
+    </div> -->
+    <div id="titleDiv">
+      <h1 style="color:#0000FF">Kara</h1><h1 style="color:#FFFFFF">oke Fra</h1><h1 style="color:#FF0000">nçais</h1>
+    
+    <div>
+      <div class"inlineBlock">
+<!--         <form id="nameForm"> -->
+          
+          <form id="messageForm">
+            <p>Please enter your name:</p>
+            <textarea rows="1" cols="35" placeholder="Name" maxlength="200" id="outgoingMessage"></textarea>
+            <input type="button" value="Submit" id="send"></input>
+          </form>
+<!--           <input type="text" value="Anonymous" id="name"> -->
+
+<!--           <input type="text" value="Anonymous" id="name" />
+          <input type="button" value="Submit" id="send" /> -->
+          
+<!--         </form> -->
+        <br>
+<!--         <form id="messageForm">
+          <textarea rows="4" cols="50" placeholder="Share something!" maxlength=200 id="outgoingMessage"></textarea>
+        
+          <input type="button" value="Share" disabled="true" id="send"></input>
+        </form> -->
+      </div>
+<!--       <div class="inlineBlock topAligned">
+        <b>Participants</b>
+        <br>
+        <div id="participants"></div>
+      </div> -->
+    </div>
+
+    <!-- start button -->
+    <div id="messages">
+      <div id="imReady" style="display:none">
+        <input type="button" value="Start!" id="startButton"></input>
+      </div>
+    </div>
+
+    <!-- Countdown -->
+    <div id="counting down">
+      <div id="numberThree" style="display:none">
+        <p>3</p>
+      </div>
+      <div id="numberTwo" style="display:none">
+        <p>2</p>
+      </div>
+      <div id="numberOne" style="display:none">
+      <p>1</p>
+      </div>
+    </div>
+
+    <!-- question 1 -->
+    <div id="questionOne" style="display:none">
+    
+        <p class="french_sentence" id="sentence1fr_1">Ma chambre a la forme d'</p>
+        <p class="french_sentence" id="sentence1fr_2">_______</p>
+        <p class="french_green sentence" id="sentence1fr_green" style="display:none">une cage</p>
+        
+        <br>
+
+        <p class="english sentence" id="sentence1en_1">My room is in the form of </p>
+        <p class="english sentence" id="sentence1en_2">_______</p>
+        <p class="english_green sentence" id="sentence1en_green" style="display:none">a cage</p>
+        
+        <br>
+
+        <input type="button" class="button answer1" id="q1_wrong1" value="une café"/>
+        <input type="button" class="button answer1" id="q1_correct" value="une cage"/>
+        <input type="button" class="button answer1" id="q1_wrong2" value="ça"/>
+        <input type="button" class="button answer1" id="q1_wrong3" value="un cahier" />
+    </div>
+
+
+
+
+        <script src='/js/index.js'></script> 
+        <audio src="sound_files/1_ma_chambre.wav" id="mp3" preload="auto"></audio>
+<!-- 
+Read more : http://www.ehow.com/how_8546693_use-javascript-play-mp3-file.html -->
+  </body>
+</html>
+
+
+
